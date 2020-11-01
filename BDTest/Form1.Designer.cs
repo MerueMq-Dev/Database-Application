@@ -57,6 +57,7 @@
             this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -245,6 +246,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.textBox6);
             this.tabPage4.Controls.Add(this.label6);
@@ -256,16 +258,17 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(132, 32);
+            this.button3.Location = new System.Drawing.Point(155, 27);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 39);
             this.button3.TabIndex = 14;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(35, 42);
+            this.textBox6.Location = new System.Drawing.Point(58, 37);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(91, 20);
             this.textBox6.TabIndex = 13;
@@ -273,7 +276,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 47);
+            this.label6.Location = new System.Drawing.Point(34, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 12;
@@ -338,6 +341,17 @@
             this.label8.Text = "label8";
             this.label8.Visible = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(73, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "label9";
+            this.label9.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +408,7 @@
         private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 

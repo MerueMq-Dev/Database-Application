@@ -144,8 +144,30 @@ namespace BDTest
             {
                 label8.Visible = true;
 
-                label8.Text = "Поля 'Id', 'Имя' и 'Цена продукта' должны быть заполнены!";
+                label8.Text = "Поля 'Id', 'Имя продукта' и 'Цена' должны быть заполнены!";
             }
         }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            if (label9.Visible)
+                label9.Visible = false;
+
+            if (!string.IsNullOrEmpty(textBox6.Text) && !string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [Products] WHERE[Id]=@Id", sqlConnection);
+
+                command.Parameters.AddWithValue("Id", textBox6.Text);
+
+                await command.ExecuteNonQueryAsync();
+            }
+            else
+            {
+                label9.Visible = true;
+
+                label9.Text = "Id должнен быть заполнен!";
+            }
+            
+        }      
     }
 }
